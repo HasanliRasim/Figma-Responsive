@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import "variables";
+@import "mixins";
+
+.header {
+  @include mobile {
+    padding: 10px 20px;
+  }
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &_nav {
+    @include mobile {
+      display: none;
+    }
+    &_ul {
+      display: flex;
+      gap: 50px;
+      &_list {
+        list-style-type: none;
+      }
+      &_link {
+        text-decoration: none;
+        color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+  }
+  &_icons {
+    display: flex;
+    @include mobile {
+      gap: 30px;
+    }
+    &_person {
+      margin: 0 30px;
+      @include mobile {
+        margin: 0 5px;
+      }
+    }
+    &_burger {
+      display: none;
+      @include mobile {
+        display: flex;
+      }
+    }
+  }
+}
+.main {
+  &_section_shop {
+    @include mobile {
+      padding: 20px 0 20px 20px;
+    }
+    padding: 0px 0 30px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_description {
+      &_title {
+        @include mobile {
+          font-size: 20px;
+        }
+        font-size: 70px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      &_btn {
+        @include mobile {
+          margin-top: 10px;
+        }
+        padding: 10px 30px;
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        margin-top: 70px;
+      }
+      &_text {
+        @include mobile {
+          font-size: 15px;
+          margin-top: 10px;
+        }
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin-top: 70px;
+      }
+      &_sentence {
+        @include mobile {
+          font-size: 15px;
+          margin-top: 30px;
+        }
+        margin-top: 70px;
+        color: #808080;
+      }
+      &_names {
+        display: flex;
+        gap: 30px;
+
+        &_title {
+          @include mobile {
+            font-size: 15px;
+            margin-top: 30px;
+          }
+          margin-top: 70px;
+          margin-bottom: 60px;
+          font-size: 30px;
+          font-weight: bold;
+          color: #808080;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      }
+      &_info {
+        @include mobile {
+          font-size: 15px;
+          margin-top: 5px;
+        }
+        margin-top: 70px;
+        font-size: 20px;
+        color: #404040;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+    &_image {
+      &_box {
+        width: 100%;
+        &_content {
+          @include mobile {
+            width: 100%;
+          }
+        }
+      }
+      &_text {
+        @include mobile {
+          font-size: 20px;
+          margin-top: 30px;
+        }
+        font-size: 30px;
+      }
+    }
+  }
+  &_section_scroll {
+    padding: 70px 0;
+    &_box {
+      @include mobile {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      text-align: center;
+      margin-bottom: 40px;
+      &_image {
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+    &_text {
+      @include mobile {
+        font-size: 20px;
+      }
+      text-align: center;
+      font-size: 35px;
+    }
+  }
+  &_section_products {
+    padding: 30px 50px;
+    &_title {
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 30px;
+      @include mobile {
+        font-size: 10px;
+      }
+    }
+    &_box {
+      margin-bottom: 30px;
+      @include mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &_text {
+        font-size: 35px;
+        margin-bottom: 30px;
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+      &_btn {
+        padding: 10px 40px;
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+      }
+    }
+    &_types {
+      @include mobile {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+      }
+      display: flex;
+      align-items: center;
+      gap: 70px;
+      &_box {
+        @include mobile {
+          display: inline-block;
+        }
+        &_name {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+  &_section_reviews {
+    @include mobile {
+      display: block;
+    }
+    display: flex;
+    padding: 7% 50px;
+    &_box {
+      @include mobile {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 35px;
+      }
+      margin-right: 90px;
+      &_title {
+        margin-bottom: 20px;
+      }
+      &_text {
+        margin-bottom: 20px;
+      }
+    }
+    &_text {
+      @include mobile {
+        text-align: center;
+        margin: 0 auto;
+      }
+      margin-left: 90px;
+      &_content {
+        @include mobile {
+          font-size: 20px;
+        }
+        font-size: 30px;
+      }
+    }
+  }
+  &_section_plants {
+    @include mobile {
+      padding: 10% 20px;
+      width: 100%;
+      gap: 15px;
+    }
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+
+    &_box {
+      @include mobile {
+        width: 50%;
+      }
+      &_image {
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+    &_right_box {
+      @include mobile {
+        width: 50%;
+      }
+      &_image {
+        @include mobile {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  &_section_check {
+    padding: 7% 50px;
+    @include mobile {
+      padding: 0px 20px;
+    }
+    &_box {
+      @include mobile {
+        width: 100%;
+        height: 100%;
+      }
+      height: 100vh;
+      background-image: url(../image/background.jfif);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      &_title {
+        font-size: 45px;
+        padding: 6% 0 20px 6%;
+        @include mobile {
+          font-size: 20px;
+          padding: 4% 0 5px 6%;
+        }
+      }
+      &_content {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px 6%;
+        @include mobile {
+          font-size: 10px;
+          padding: 10px 6%;
+        }
+      }
+      &_link {
+        @include mobile {
+          font-size: 10px;
+          padding: 0px 0 20% 6%;
+        }
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px 6%;
+        font-weight: bold;
+      }
+    }
+  }
+  &_section_input {
+    @include mobile {
+      display: block;
+      padding: 20px 50px;
+    }
+    display: flex;
+    padding: 0 50px 70px 50px;
+    justify-content: space-between;
+    align-items: center;
+    &_info {
+      &_text {
+        font-size: 45px;
+        @include mobile {
+          font-size: 25px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+    &_box {
+      @include mobile {
+        display: flex;
+        justify-content: space-between;
+      }
+      padding: 5px 0;
+      border-bottom: 2px solid black;
+      &_content {
+        border: none;
+      }
+      &_btn {
+        padding: 10px 30px;
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+.footer {
+  @include mobile {
+    display: block;
+    text-align: center;
+    line-height: 70px;
+  }
+  padding: 50px 50px;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &_nav {
+    &_ul {
+      @include mobile {
+        display: block;
+        margin-bottom: 20px;
+      }
+      display: flex;
+      gap: 50px;
+      &_list {
+        list-style-type: none;
+      }
+      &_link {
+        text-decoration: none;
+        color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+  }
+  &_icons {
+    display: flex;
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    &_twitter {
+      margin: 0 30px;
+      @include mobile {
+        margin: 0 20px;
+      }
+    }
+  }
+}
